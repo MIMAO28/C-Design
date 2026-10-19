@@ -2,50 +2,38 @@
 
 C++ 项目。
 
-## 目录
+## 怎么加一个新程序
+
+**只要做两件事：**
+
+1. 在 `src\` 里新建一个 `.cpp` 文件（比如 `lab1.cpp`），里面写你的 `int main()`
+2. 点 CLion 右上角弹出的 `Reload CMake Project`
+
+**完事。** `CMakeLists.txt` 不用改，它会自动把 `src\` 里每个 `.cpp` 编成同名程序。
 
 ```text
-CMakeLists.txt        编译配置（加新文件后要改这里）
-src/main.cpp          项目主程序入口
-labs/                 各个实验，一个实验一个文件夹
-cmake-build-debug/    编译产物（不提交）
+src\main.cpp    →  main.exe
+src\lab1.cpp    →  lab1.exe
+src\test.cpp    →  test.exe
 ```
+
+然后 CLion 右上角的运行配置下拉框里就能选到对应的程序。
+
+> **注意**：新建文件时用「新建 → 文件」，不要用「新建 C++ 类」。
+> 类对话框只能建类，名字里也不能有点号。
+
+## 注意
+
+- 一个 `.cpp` 只能有一个 `main()`。两个程序不要写在同一个文件里。
+- 同名文件会冲突。
 
 ## 构建
 
-CMake 3.20+ / C++17。
-在 CLion 2026.2 + 自带 MinGW（GCC 15.2）下验证通过。
+CMake 3.20+ / C++17，在 CLion 2026.2 + 自带 MinGW（GCC 15.2）验证通过。
 
-```text
-cmake -S . -B cmake-build-debug
-cmake --build cmake-build-debug
-```
+编译产物在 `cmake-build-debug\`，不提交。
 
-编出来的 exe 都在 `cmake-build-debug/bin/`。
+## 上传 GitHub
 
-## 怎么加一个新实验
-
-**第 1 步**：建文件夹和文件
-
-```text
-labs/lab2/main.cpp        ← 里面写你的 int main()
-```
-
-**第 2 步**：打开 `CMakeLists.txt`，在最后加一行
-
-```cmake
-add_executable(lab2 labs/lab2/main.cpp)
-```
-
-**第 3 步**：CLion 右上角弹 `Reload CMake Project`，点一下。
-
-然后 CLion 的运行配置下拉框里就会多一个 `lab2`，可以直接运行/调试。
-
-> 为什么每个实验要单独一个 `add_executable`？
-> 因为一个程序只能有一个 `main()`。两个实验的 `main()` 放进同一个程序会链接报错。
-
-## 上传到 GitHub
-
-见 `CLion` 里：
 - 提交：`Ctrl + K`
 - 推送：`Ctrl + Shift + K`

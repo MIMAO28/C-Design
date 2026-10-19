@@ -1,19 +1,21 @@
+////参考程序1
+//sum. cpp
 #include <iostream>
-#include <string>
-#include <vector>
-
-// C-Design
-// 从 main 开始写，加新文件后记得同步更新 CMakeLists.txt 里的 PROJECT_SOURCES
-
-int main() {
-    std::cout << "C-Design build OK\n";
-    std::cout << "C++ standard: " << __cplusplus << "\n";
-
-    std::vector<std::string> todo{
-        "replace this with your first module",
-    };
-    for (const auto& t : todo) {
-        std::cout << "  TODO: " << t << "\n";
-    }
+using namespace std;
+int add(int a,int b);
+int main()
+{
+    int x,y,sum;
+    cout<<"Enter two numbers:\n";
+    cin>>x;
+    cin>>y;
+    sum=add(x,y);
+    cout<<"The sum is:"<<sum<<endl;
     return 0;
+}
+int add(int a,int b)
+{
+    int c;
+    c=a+b;
+    return c;
 }
