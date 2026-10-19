@@ -1,4 +1,4 @@
-// 实验一 第2题：重载函数 Max1
+// 实验一 第2题:重载函数 Max1
 #include <iostream>
 using namespace std;
 
