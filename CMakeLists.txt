@@ -25,7 +25,8 @@ foreach(src ${SOURCES})
     string(REPLACE "." "_" tgt "${name}")
 
     add_executable(${tgt} ${src}
-            src/lab1.3.cpp)
+            src/lab1.3.cpp
+            src/lab1.4.cpp)
     set_target_properties(${tgt} PROPERTIES OUTPUT_NAME "${name}")
 
     get_target_property(_cur ${tgt} SOURCES)
