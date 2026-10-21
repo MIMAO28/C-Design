@@ -11,7 +11,7 @@ int main(void)
         cout<<"打不开input"<<endl;
         return 1;
     }
-    ofstream fout("output.txt");
+    ofstream fout("output.txt");//创建一个文件输入流，绑定,把读的位置放在第一行开头
     string line;//用于存当前行内容
     int x=1;
     while (getline(fin,line))
