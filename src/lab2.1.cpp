@@ -1,5 +1,6 @@
 //实验二 问题1：完成CPoint成员函数
 #include<iostream>
+
 class CPoint
 {
 private:
@@ -14,13 +15,31 @@ public:
     void SetX(int);
     void SetY(int);
     void ShowPoint();
+    CPoint operator+(CPoint pt);
+    CPoint operator-(CPoint pt);
 };
+std::ostream& operator<<(std::ostream& out,CPoint pt)
+{
+    out<<'('<<pt.GetX()<<','<<pt.GetY()<<')';
+    return out;
+}
+std::istream& operator>>(std::istream& in,CPoint &pt)
+{
+    int px,py;
+    if (in>>px>>py)
+    {
+        pt.SetX(px);
+        pt.SetY(py);
+    }
+    return in;
+}
 int CPoint::nCount=0;
 ////构造函数同名无返回值
-CPoint::CPoint(int px,int py) :x(px),y(py)
+CPoint::CPoint(int px,int py)
 {
+    x=px;
+    y=py;
     nCount++;
-    std::cout<<"point_num"<<nCount<<std::endl;
 }
 //接受px,py传输给x,y
 int CPoint::GetX()
@@ -40,16 +59,27 @@ void CPoint::SetY(int py)
     y=py;
 }
 ////拷贝构造函数
-CPoint::CPoint(CPoint& p) :x(p.GetX()),y(p.GetY())
+CPoint::CPoint(CPoint& p)
 {
+    x=p.GetX();
+    y=p.GetY();
     nCount++;
-    std::cout<<"point_num："<<nCount<<std::endl;
 }
 ////析构函数
 CPoint::~CPoint()
 {
     --nCount;
-    std::cout<<"point_num："<<nCount<<std::endl;
+}
+
+////重载+运算
+CPoint CPoint::operator+(CPoint pt)
+{
+    return CPoint(x+pt.GetX(),y+pt.GetY());
+}
+////重载-运算
+CPoint CPoint::operator-(CPoint pt)
+{
+    return CPoint(x-pt.GetX(),y-pt.GetY());
 }
 
 void CPoint::ShowPoint()
@@ -58,20 +88,18 @@ void CPoint::ShowPoint()
 }
 int main()
 {
-    CPoint p1(3, 5);//创建对象：计数变为1
+    CPoint a, b;
 
-    {
-        CPoint p2(p1);//拷贝创建对象：计数变为2
+    std::cout << "请输入两个点的坐标：\n";
+    std::cin >> a >> b;
 
-        CPoint* ptr = &p1;//指针指向已有对象p1
-        CPoint& ref = p1; //引用是已有对象p1的别名
+    CPoint sum = a + b;
+    CPoint difference = a - b;
 
-        ptr->SetX(8);
-        ref.SetY(9);
+    std::cout << "a：" << a << '\n';
+    std::cout << "b：" << b << '\n';
+    std::cout << "a+b：" << sum << '\n';
+    std::cout << "a-b：" << difference << '\n';
 
-        p1.ShowPoint();
-        p2.ShowPoint();
-    }//p2析构：计数变为1
-    p1.ShowPoint();
     return 0;
-}//p1析构：计数变为0
+}

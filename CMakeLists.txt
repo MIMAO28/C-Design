@@ -28,7 +28,8 @@ foreach(src ${SOURCES})
             src/lab1.3.cpp
             src/lab1.4.cpp
             src/lab2.1.cpp
-            src/lab2.2.cpp)
+            src/lab2.2.cpp
+            src/lab3.1.cpp)
     set_target_properties(${tgt} PROPERTIES OUTPUT_NAME "${name}")
 
     get_target_property(_cur ${tgt} SOURCES)
