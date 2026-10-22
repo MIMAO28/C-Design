@@ -45,19 +45,45 @@ double CLine::Distance()
     double dy=pt1.GetY()-pt2.GetY();
     return sqrt(dx*dx+dy*dy);
 }
-int main(void)
+int main()
 {
-    CLine line1;
-    CLine line2(1,2,4,6);
-    CPoint a(0,0);
-    CPoint b(3,4);
-    CLine line3(a,b);
-    line1.ShowLine();
-    std::cout<<"line1_length:"<<line1.Distance()<<std::endl;
-    line2.ShowLine();
-    std::cout<<"line2_length:"<<line2.Distance()<<std::endl;
-    line3.ShowLine();
-    std::cout<<"line3_length:"<<line3.Distance()<<std::endl;
-    return 0;
+    std::cout << "初始点数：" << CPoint::GetCount() << '\n';
 
+    {
+        //1.默认构造
+        CLine line1;
+
+        //2.四个坐标构造
+        CLine line2(1, 2, 4, 6);
+
+        //3.两个点构造
+        CPoint a(0, 0);
+        CPoint b(3, 4);
+        CLine line3(a, b);
+
+        std::cout << "line1：\n";
+        line1.ShowLine();
+        std::cout << "长度：" << line1.Distance() << '\n';
+
+        std::cout << "line2：\n";
+        line2.ShowLine();
+        std::cout << "长度：" << line2.Distance() << '\n';
+
+        std::cout << "line3：\n";
+        line3.ShowLine();
+        std::cout << "长度：" << line3.Distance() << '\n';
+
+        //4.验证断电修改
+        a.SetX(100);
+        std::cout << "修改原点a后，line3：\n";
+        line3.ShowLine();
+
+        std::cout << "当前点数："
+                  << CPoint::GetCount() << '\n';
+    }
+
+    std::cout << "作用域结束后的点数："
+              << CPoint::GetCount() << '\n';
+
+    return 0;
 }
