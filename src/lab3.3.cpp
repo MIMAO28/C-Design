@@ -12,6 +12,8 @@ public:
     double getWeight();
     void setMaxSpeed(double nSpeed);
     void setWeight(double nWeight);
+    virtual void Run();
+    virtual void Stop();
     virtual void showVehicle();
 };
 
@@ -49,4 +51,14 @@ void Vehicle::setWeight(double nWeight)
 void Vehicle::showVehicle()
 {
     std::cout<<"Vehicle"<<std::endl<<"Speed:"<<getMaxSpeed()<<std::endl<<"Weight:"<<getWeight()<<std::endl;
+}
+
+void Vehicle::Run()
+{
+    std::cout<<"Vehicle is running"<<std::endl;
+}
+
+void Vehicle::Stop()
+{
+    std::cout<<"Vehicle stopped"<<std::endl;
 }
