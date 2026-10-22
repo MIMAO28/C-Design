@@ -44,6 +44,7 @@ CPoint::CPoint(int px,int py)
     x=px;
     y=py;
     ++nCount;
+    //点构造，当前点数
 }
 
 int CPoint::GetX()
@@ -73,6 +74,7 @@ CPoint::CPoint(CPoint& p)
 CPoint::~CPoint()
 {
     --nCount;
+    //点析构，剩余点数
 }
 
 ////重载+运算
