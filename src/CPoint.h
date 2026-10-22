@@ -13,7 +13,7 @@ public:
     int GetY();
     void SetX(int);
     void SetY(int);
-    void ShowPoint();
+    virtual void ShowPoint();
     static int GetCount()
     {return nCount;}
 
