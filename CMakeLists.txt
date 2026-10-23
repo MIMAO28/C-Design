@@ -37,7 +37,9 @@ foreach(src ${SOURCES})
             src/lab3.3_Motorcar.cpp
             src/lab3.3_Motorbike.cpp
             "src/lab3.2_rectangle.cpp"
-            src/lab3.2_cline.cpp)
+            src/lab3.2_cline.cpp
+            src/lab4.1.cpp
+            src/lab4.2.cpp)
     set_target_properties(${tgt} PROPERTIES OUTPUT_NAME "${name}")
 
     get_target_property(_cur ${tgt} SOURCES)
