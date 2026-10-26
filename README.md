@@ -12,9 +12,9 @@ C++ 项目。
 **完事。** `CMakeLists.txt` 不用改，它会自动把 `src\` 里每个 `.cpp` 编成同名程序。
 
 ```text
-src\main.cpp     →  main.exe
+src\sum.cpp     →  sum.exe
 src\lab1.cpp     →  lab1.exe
-src\lab1.1.cpp   →  lab1.1.exe
+src\lab1_2.cpp   →  lab1_2.exe
 ```
 
 然后 CLion 右上角的运行配置下拉框里就能选到对应的程序。
@@ -25,7 +25,7 @@ src\lab1.1.cpp   →  lab1.1.exe
 ## 注意
 
 - 一个 `.cpp` 只能有一个 `main()`。两个程序不要写在同一个文件里。
-- 文件名可以用点号（`lab1.1.cpp` 可以），但**最后一个点后面必须是 `cpp`**。
+- 实验文件统一使用下划线，例如 `lab1_2.cpp`；文件扩展名必须是 `.cpp`。
 - 两个文件同名会冲突。
 
 ## 中文乱码怎么办

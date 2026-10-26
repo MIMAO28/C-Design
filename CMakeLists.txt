@@ -25,22 +25,22 @@ foreach(src ${SOURCES})
     string(REPLACE "." "_" tgt "${name}")
 
     add_executable(${tgt} ${src}
-            src/lab1.3.cpp
-            src/lab1.4.cpp
-            src/lab2.1.cpp
-            src/lab2.2.cpp
-            src/lab3.1.cpp
-            src/lab3.2.cpp
-            src/lab3.2_circle.cpp
-            src/lab3.3.cpp
-            src/lab3.3_bicycle.cpp
-            src/lab3.3_Motorcar.cpp
-            src/lab3.3_Motorbike.cpp
-            "src/lab3.2_rectangle.cpp"
-            src/lab3.2_cline.cpp
-            src/lab4.1.cpp
-            src/lab4.2.cpp
-            src/lab4.3.cpp)
+            src/lab1_4.cpp
+            src/lab1_5.cpp
+            src/lab2_1.cpp
+            src/lab2_2.cpp
+            src/lab3_1.cpp
+            src/lab3_2.cpp
+            src/lab3_2_circle.cpp
+            src/lab3_3.cpp
+            src/lab3_3_bicycle.cpp
+            src/lab3_3_Motorcar.cpp
+            src/lab3_3_Motorbike.cpp
+            "src/lab3_2_rectangle.cpp"
+            src/lab3_2_cline.cpp
+            src/lab4_1.cpp
+            src/lab4_2.cpp
+            src/lab4_3.cpp)
     set_target_properties(${tgt} PROPERTIES OUTPUT_NAME "${name}")
 
     get_target_property(_cur ${tgt} SOURCES)
