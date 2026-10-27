@@ -21,9 +21,10 @@ Rectangle::Rectangle(ColorType c,int x,int y,double length,double width):Shape(c
 }
 void Rectangle::draw()
 {
-    std::cout<<"This is a Rectangle"<<std::endl;
-    std::cout<<"Position:"<<pt.GetX()<<" "<<pt.GetY()<<std::endl;
-    std::cout<<"Length Width:"<<length<<' '<<width<<std::endl;
+    std::cout<<"This is a rectangle"<<std::endl;
+    std::cout<<"Position: ("<<pt.GetX()<<", "<<pt.GetY()<<')'<<std::endl;
+    std::cout<<"Length: "<<length<<std::endl;
+    std::cout<<"Width: "<<width<<std::endl;
 }
 int main()
 {

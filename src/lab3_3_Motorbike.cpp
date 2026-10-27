@@ -27,17 +27,21 @@ Motorbike::Motorbike(double a,double b,double c,double d)
 
 void Motorbike::showVehicle()
 {
-    std::cout<<"Motorbike"<<std::endl<<"Seatnum:"<<getSeatnum()<<std::endl<<"Weight:"<<getWeight()<<std::endl<<"MaxSpeed:"<<getMaxSpeed()<<std::endl<<"Height:"<<getHeight()<<std::endl;
+    std::cout<<"Motorbike"<<std::endl;
+    std::cout<<"MaxSpeed: "<<getMaxSpeed()<<std::endl;
+    std::cout<<"Weight: "<<getWeight()<<std::endl;
+    std::cout<<"Height: "<<getHeight()<<std::endl;
+    std::cout<<"SeatNum: "<<getSeatnum()<<std::endl;
 
 }
 
 void Motorbike::Run()
 {
-    std::cout<<"Motorbike is running "<<std::endl;
+    std::cout<<"Motorbike is running"<<std::endl;
 }
 void Motorbike::Stop()
 {
-    std::cout<<"Motorbike stopped "<<std::endl;
+    std::cout<<"Motorbike stopped"<<std::endl;
 }
 
 int main()
@@ -48,7 +52,7 @@ int main()
     Motorcar c(180,1500,5);
     Motorbike m(120,180,1.1,2);
 
-    std::cout<<"1.Direct call"<<std::endl;
+    std::cout<<"1. Direct call:"<<std::endl;
     v.showVehicle();
     v.Run();
     v.Stop();
@@ -66,7 +70,7 @@ int main()
     m.Stop();
 
     //2.同一个Vehicle指针分别指向四种对象，观察虚函数调用的结果
-    std::cout<<std::endl<<"2.Vehicle pointer call"<<std::endl;
+    std::cout<<"2. Vehicle pointer call:"<<std::endl;
     Vehicle* ptr=&v;
     ptr->showVehicle();
     ptr->Run();

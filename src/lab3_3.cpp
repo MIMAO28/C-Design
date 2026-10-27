@@ -50,7 +50,9 @@ void Vehicle::setWeight(double nWeight)
 
 void Vehicle::showVehicle()
 {
-    std::cout<<"Vehicle"<<std::endl<<"Speed:"<<getMaxSpeed()<<std::endl<<"Weight:"<<getWeight()<<std::endl;
+    std::cout<<"Vehicle"<<std::endl;
+    std::cout<<"MaxSpeed: "<<getMaxSpeed()<<std::endl;
+    std::cout<<"Weight: "<<getWeight()<<std::endl;
 }
 
 void Vehicle::Run()

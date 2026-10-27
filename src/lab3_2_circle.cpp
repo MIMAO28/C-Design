@@ -19,10 +19,10 @@ Circle::Circle(ColorType c,int x,int y,double dr):Shape(c)
 }
 void Circle::draw()
 {
-    std::cout<<"This is a Circle"<<std::endl;
-    std::cout<<"center:";
+    std::cout<<"This is a circle"<<std::endl;
+    std::cout<<"Center: ";
     center.ShowPoint();
-    std::cout<<"radius:"<<r<<std::endl;
+    std::cout<<"Radius: "<<r<<std::endl;
 }
 int main()
 {

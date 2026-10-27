@@ -8,16 +8,16 @@ int main(void)
     std::ifstream fin("input.txt");//创建一个文件输入流dx，绑定,把读的位置放在第一行开头
     if (!fin)//文件-》程序
     {
-        std::cout<<"打不开input"<< std::endl;
+        std::cout<<"Cannot open input.txt"<<std::endl;
         return 1;
     }
     std::ofstream fout("output.txt");//创建一个文件输出流，绑定,把读的位置放在第一行开头
     std::string line;//用于存当前行内容
     int x=1;
-    while (getline(fin,line))
+    while (std::getline(fin,line))
     {
-        std::cout<<x<<":"<<line<< std::endl;
-        fout<<x<<":"<<line<< std::endl;
+        std::cout<<x<<": "<<line<<std::endl;
+        fout<<x<<": "<<line<<std::endl;
         x++;
     }
     fin.close();

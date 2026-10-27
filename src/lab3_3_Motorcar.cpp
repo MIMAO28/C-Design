@@ -37,13 +37,16 @@ void Motorcar::setSeatnum(double a)
 }
 void Motorcar::showVehicle()
 {
-    std::cout<<"Motorcar"<<std::endl<<"Seatnum:"<<getSeatnum()<<std::endl<<"Weight:"<<getWeight()<<std::endl<<"MaxSpeed:"<<getMaxSpeed()<<std::endl;
+    std::cout<<"Motorcar"<<std::endl;
+    std::cout<<"MaxSpeed: "<<getMaxSpeed()<<std::endl;
+    std::cout<<"Weight: "<<getWeight()<<std::endl;
+    std::cout<<"SeatNum: "<<getSeatnum()<<std::endl;
 }
 void Motorcar::Run()
 {
-    std::cout<<"Bicycle is running "<<std::endl;
+    std::cout<<"Motorcar is running"<<std::endl;
 }
 void Motorcar::Stop()
 {
-    std::cout<<"Bicycle stopped "<<std::endl;
+    std::cout<<"Motorcar stopped"<<std::endl;
 }

@@ -35,7 +35,7 @@ void CThreePoint::SetZ(int pz)
 }
 void CThreePoint::ShowPoint()
 {
-    std::cout<<this->GetX()<<' '<<this->GetY()<<' '<<this->GetZ()<<std::endl;
+    std::cout<<'('<<this->GetX()<<", "<<this->GetY()<<", "<<this->GetZ()<<')'<<std::endl;
 }
 
 int main()

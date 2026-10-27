@@ -1,6 +1,5 @@
 // 实验一 第2题:重载函数 Max1
 #include <iostream>
-using namespace std;
 
 //两个整数
 int Max1(int a, int b)
@@ -32,22 +31,22 @@ int main()
 {
     int a, b, c;
 
-    cout<<"输入两个整数: ";
-    cin>>a>>b;
-    cout<<"最大值 = "<<Max1(a, b)<<endl;
+    std::cout<<"Enter two integers: ";
+    std::cin>>a>>b;
+    std::cout<<"Max: "<<Max1(a, b)<<std::endl;
 
-    cout<<"输入三个整数: ";
-    cin>>a>>b>>c;
-    cout<<"最大值 = "<<Max1(a, b, c)<<endl;
+    std::cout<<"Enter three integers: ";
+    std::cin>>a>>b>>c;
+    std::cout<<"Max: "<<Max1(a, b, c)<<std::endl;
 
     double x,y,z;
 
-    cout<<"输入两个小数: ";
-    cin>>x>>y;
-    cout<<"最大值 = "<<Max1(x, y)<<endl;
+    std::cout<<"Enter two doubles: ";
+    std::cin>>x>>y;
+    std::cout<<"Max: "<<Max1(x, y)<<std::endl;
 
-    cout<< "输入三个小数: ";
-    cin>>x>>y>>z;
-    cout<<"最大值 = "<<Max1(x, y, z)<<endl;
+    std::cout<<"Enter three doubles: ";
+    std::cin>>x>>y>>z;
+    std::cout<<"Max: "<<Max1(x, y, z)<<std::endl;
     return 0;
 }

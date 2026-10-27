@@ -20,7 +20,7 @@ CLine::CLine() :pt1(),pt2()
 ////构造二
 CLine::CLine(int x1,int y1,int x2,int y2)
 {
-    std::cout<<"begin:";//执行线段构造函数体
+    std::cout<<"CLine constructor"<<std::endl;//执行线段构造函数体
     pt1.SetX(x1);
     pt1.SetY(y1);
     pt2.SetX(x2);
@@ -35,9 +35,9 @@ CLine::CLine(CPoint p1,CPoint p2)
 
 void CLine::ShowLine()
 {
-    std::cout<<"begin:";
+    std::cout<<"Start: ";
     pt1.ShowPoint();
-    std::cout<<"end:";
+    std::cout<<"End: ";
     pt2.ShowPoint();
 }
 
@@ -49,7 +49,7 @@ double CLine::Distance()
 }
  int main()
  {
-     std::cout << "初始点数：" << CPoint::GetCount() << '\n'<<'\n';
+     std::cout<<"Initial point count: "<<CPoint::GetCount()<<std::endl;
 
      {
          //1.默认构造
@@ -63,27 +63,27 @@ double CLine::Distance()
          CPoint b(3, 4);
          CLine line3(a, b);
 
-         std::cout << "line1：\n";
+         std::cout<<"Line 1:"<<std::endl;
          line1.ShowLine();
-         std::cout << "长度：" << line1.Distance() << '\n'<<'\n';
+         std::cout<<"Length: "<<line1.Distance()<<std::endl;
 
-         std::cout << "line2：\n";
+         std::cout<<"Line 2:"<<std::endl;
          line2.ShowLine();
-         std::cout << "长度：" << line2.Distance() << '\n'<<'\n';
+         std::cout<<"Length: "<<line2.Distance()<<std::endl;
 
-         std::cout << "line3：\n";
+         std::cout<<"Line 3:"<<std::endl;
          line3.ShowLine();
-         std::cout << "长度：" << line3.Distance() << '\n'<<'\n';
+         std::cout<<"Length: "<<line3.Distance()<<std::endl;
 
          //4.验证断电修改
          a.SetX(100);
-         std::cout << "修改原点a后，line3：\n"<<'\n';
+         std::cout<<"Line 3 after changing a:"<<std::endl;
          line3.ShowLine();
 
-         std::cout << "当前点数："<< CPoint::GetCount() << '\n'<<'\n';
+         std::cout<<"Current point count: "<<CPoint::GetCount()<<std::endl;
      }
 
-     std::cout << "作用域结束后的点数："<< CPoint::GetCount() << '\n'<<'\n';
+     std::cout<<"Point count after scope end: "<<CPoint::GetCount()<<std::endl;
 
      return 0;
  }

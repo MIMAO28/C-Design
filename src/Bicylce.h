@@ -39,13 +39,16 @@ void Bicycle::setHeight(double a)
 }
 void Bicycle::showVehicle()
 {
-    std::cout<<"Bicycle"<<std::endl<<"Height:"<<getHeight()<<std::endl<<"Weight:"<<getWeight()<<std::endl<<"MaxSpeed:"<<getMaxSpeed()<<std::endl;
+    std::cout<<"Bicycle"<<std::endl;
+    std::cout<<"MaxSpeed: "<<getMaxSpeed()<<std::endl;
+    std::cout<<"Weight: "<<getWeight()<<std::endl;
+    std::cout<<"Height: "<<getHeight()<<std::endl;
 }
 void Bicycle::Run()
 {
-    std::cout<<"Bicycle is running "<<std::endl;
+    std::cout<<"Bicycle is running"<<std::endl;
 }
 void Bicycle::Stop()
 {
-    std::cout<<"Bicycle stopped "<<std::endl;
+    std::cout<<"Bicycle stopped"<<std::endl;
 }

@@ -1,16 +1,15 @@
 ////参考程序1
 //sum. cpp
 #include <iostream>
-using namespace std;
 int add(int a,int b);
 int main()
 {
     int x,y,sum;
-    cout<<"Enter two numbers:\n";
-    cin>>x;
-    cin>>y;
+    std::cout<<"Enter two integers: ";
+    std::cin>>x;
+    std::cin>>y;
     sum=add(x,y);
-    cout<<"The sum is:"<<sum<<endl;
+    std::cout<<"Sum: "<<sum<<std::endl;
     return 0;
 }
 int add(int a,int b)

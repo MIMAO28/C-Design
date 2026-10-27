@@ -15,7 +15,7 @@ void transpose(int num[3][3])
 int main(void)
 {
     int num[3][3];
-    std::cout<<"Enter 3*3:"<< std::endl;
+    std::cout<<"Enter a 3x3 matrix:"<<std::endl;
     for (int i=0;i<3;i++)
     {
         for (int j=0;j<3;j++)
@@ -23,24 +23,24 @@ int main(void)
             std::cin>>num[i][j];
         }
     }
-    std::cout<<"Now:"<< std::endl;
+    std::cout<<"Original matrix:"<<std::endl;
     for (int i=0;i<3;i++)
     {
         for (int j=0;j<3;j++)
         {
             std::cout<<num[i][j]<<' ';
         }
-        std::cout<< std::endl;
+        std::cout<<std::endl;
     }
     transpose(num);//debug中的StepInto追踪到函数内部
-    std::cout<<"After transpose:"<< std::endl;
+    std::cout<<"Transposed matrix:"<<std::endl;
     for (int i=0;i<3;i++)
     {
         for (int j=0;j<3;j++)
         {
             std::cout<<num[i][j]<<' ';
         }
-        std::cout<< std::endl;
+        std::cout<<std::endl;
     }
     return 0;
 }

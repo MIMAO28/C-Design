@@ -16,12 +16,12 @@ char* min(char* a,char* b)
 int main(void)
 {
     int a=3,b=5;
-    std::cout<<"int min:"<<min(a,b)<<std::endl;
+    std::cout<<"Int min: "<<min(a,b)<<std::endl;
 
     double x=2.5,y=1.8;
-    std::cout<<"double min:"<<min(x,y)<<std::endl;
+    std::cout<<"Double min: "<<min(x,y)<<std::endl;
 
     char s1[]="banana";
     char s2[]="apple";
-    std::cout<<"string min:"<<min(s1,s2)<<std::endl;
+    std::cout<<"String min: "<<min(s1,s2)<<std::endl;
 }

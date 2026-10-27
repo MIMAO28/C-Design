@@ -19,7 +19,7 @@ int main(void)
     {
         num[i] = new int[3];//分别给三行申请空间，保存三个整数
     }
-    std::cout<<"输入3*3矩阵(分配内存式)"<< std::endl;
+    std::cout<<"Enter a 3x3 matrix:"<<std::endl;
     for (int i=0;i<3;i++)
     {
         for (int j=0;j<3;j++)
@@ -27,24 +27,24 @@ int main(void)
             std::cin>>num[i][j];
         }
     }
-    std::cout<<"当前矩阵："<< std::endl;
+    std::cout<<"Original matrix:"<<std::endl;
     for (int i=0;i<3;i++)
     {
         for (int j=0;j<3;j++)
         {
             std::cout<<num[i][j]<<' ';
         }
-        std::cout<< std::endl;
+        std::cout<<std::endl;
     }
     transpose(num);
-    std::cout<<"转置后矩阵:"<< std::endl;
+    std::cout<<"Transposed matrix:"<<std::endl;
     for (int i=0;i<3;i++)
     {
         for (int j=0;j<3;j++)
         {
             std::cout<<num[i][j]<<' ';
         }
-        std::cout<< std::endl;
+        std::cout<<std::endl;
     }
     for (int i=0;i<3;i++)
     {

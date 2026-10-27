@@ -19,10 +19,10 @@ Cline::Cline(ColorType c,int x1,int y1,int x2,int y2):Shape(c)
 }
 void Cline::draw()
 {
-    std::cout<<"This is a line:"<<std::endl;
-    std::cout<<"begin:";
+    std::cout<<"This is a line"<<std::endl;
+    std::cout<<"Start: ";
     pt1.ShowPoint();
-    std::cout<<"end:";
+    std::cout<<"End: ";
     pt2.ShowPoint();
 }
 int main(void)

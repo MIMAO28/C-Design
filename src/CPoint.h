@@ -13,7 +13,7 @@ public:
     int GetY();
     void SetX(int);
     void SetY(int);
-     void ShowPoint();
+     virtual void ShowPoint();
     static int GetCount()
     {return nCount;}
 
@@ -23,7 +23,7 @@ public:
 
 std::ostream& operator<<(std::ostream& out,CPoint pt)
 {
-    out<<'('<<pt.GetX()<<','<<pt.GetY()<<')';
+    out<<'('<<pt.GetX()<<", "<<pt.GetY()<<')';
     return out;
 }
 //operator<<(std::cout, p)本质为一次函数调用，由关键字operator+要重载的运算符组成，返回一个输出流的引用用于连续输出入
@@ -90,5 +90,5 @@ CPoint CPoint::operator-(CPoint pt)
 
 void CPoint::ShowPoint()
 {
-    std::cout<<this->GetX()<<' '<<this->GetY()<<std::endl;
+    std::cout<<'('<<this->GetX()<<", "<<this->GetY()<<')'<<std::endl;
 }

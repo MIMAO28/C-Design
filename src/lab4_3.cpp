@@ -11,7 +11,7 @@ int main(void)
 {
     std::vector<int> num;
     int n;
-    std::cout<<"Enter number:"<<std::endl;
+    std::cout<<"Enter integers (0 to end): ";
     while (std::cin>>n)
     {
         if (n==0)
@@ -38,5 +38,6 @@ int main(void)
 
     std::cout<<"Output 3:"<<std::endl;
     std::for_each(num.begin(),num.end(),print);//遍历每一个元素
+    std::cout<<std::endl;
     return 0;
 }
